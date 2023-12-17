@@ -44,6 +44,7 @@ Tugas berikutnya adalah memberikan ip pada subnet SchwerMountain, LaubHills, Tur
 
 ## Konfigurasi Setiap Node
 
+## Router
 **Aura**
 ```bash
 auto eth0
@@ -149,4 +150,81 @@ auto eth2
 iface eth2 inet static
 	address 10.7.0.1
 	netmask 255.255.255.252
+```
+
+## Client
+
+**TurkRegion**
+```bash
+# DHCP config for eth0
+auto eth0
+iface eth0 inet dhcp
+#	hostname ubuntu-1-1
+```
+
+**GrobeForest**
+```bash
+# DHCP config for eth0
+auto eth0
+iface eth0 inet dhcp
+```
+
+**LaubHills**
+```bash
+# DHCP config for eth0
+auto eth0
+iface eth0 inet dhcp
+```
+
+**SchewerMountain**
+```bash
+# DHCP config for eth0
+auto eth0
+iface eth0 inet dhcp
+```
+
+## Server
+
+**Sein**
+```bash
+# Static config for eth0
+auto eth0
+iface eth0 inet static
+	address 10.7.4.2
+	netmask 255.255.252.0
+	gateway 10.7.4.1
+	up echo nameserver 192.168.122.1 > /etc/resolv.conf
+```
+
+**Stark**
+```bash
+# Static config for eth0
+auto eth0
+iface eth0 inet static
+         address 10.7.0.14
+         netmask 255.255.255.252
+         gateway 10.7.0.13
+	 up echo nameserver 192.168.122.1 > /etc/resolv.conf
+```
+
+**Ritcher**
+```bash
+# Static config for eth0
+auto eth0
+iface eth0 inet static
+	address 10.7.0.6
+	netmask 255.255.255.252
+	gateway 10.7.0.5
+	up echo nameserver 192.168.122.1 > /etc/resolv.conf
+```
+
+**Revolte**
+```bash
+# Static config for eth0
+auto eth0
+iface eth0 inet static
+	address 10.7.0.2
+	netmask 255.255.255.252
+	gateway 10.7.0.1
+	up echo nameserver 192.168.122.1 > /etc/resolv.conf
 ```
