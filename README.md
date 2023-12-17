@@ -228,3 +228,31 @@ iface eth0 inet static
 	gateway 10.7.0.1
 	up echo nameserver 192.168.122.1 > /etc/resolv.conf
 ```
+
+## Routing
+
+**Aura**
+```bash
+route add -net 10.7.0.0 netmask 255.255.255.252 gw 10.7.0.18
+route add -net 10.7.0.4 netmask 255.255.255.252 gw 10.7.0.18
+route add -net 10.7.0.128 netmask 255.255.255.128 gw 10.7.0.18
+route add -net 10.7.2.0 netmask 255.255.255.0 gw 10.7.0.18
+route add -net 10.7.0.8 netmask 255.255.255.252 gw 10.7.0.18
+route add -net 10.7.0.12 netmask 255.255.255.252 gw 10.7.0.18
+
+route add -net 10.7.8.0 netmask 255.255.248.0 gw 10.7.0.22
+route add -net 10.7.4.0 netmask 255.255.252.0 gw 10.7.0.22
+```
+**Frieren**
+```bash
+route add -net 10.7.0.0 netmask 255.255.255.252 gw 10.7.0.10
+route add -net 10.7.0.4 netmask 255.255.255.252 gw 10.7.0.10
+route add -net 10.7.0.128 netmask 255.255.255.128 gw 10.7.0.10
+route add -net 10.7.2.0 netmask 255.255.255.0 gw 10.7.0.10
+```
+
+**Himmel**
+```bash
+route add -net 10.7.0.0 netmask 255.255.255.252 gw 10.7.0.130
+route add -net 10.7.0.4 netmask 255.255.255.252 gw 10.7.0.130
+```
