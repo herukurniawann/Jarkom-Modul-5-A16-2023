@@ -62,5 +62,91 @@ iface eth2 inet static
        address 10.7.0.17
        netmask 255.255.255.252
 ```
- 
 
+**Heiter**
+
+```bash
+auto eth0
+iface eth0 inet static
+         address 10.7.0.22
+         netmask 255.255.255.252
+         gateway 10.7.0.21
+	 up echo nameserver 192.168.122.1 > /etc/resolv.conf
+
+auto eth2
+iface eth2 inet static
+         address 10.7.8.1
+         netmask 255.255.248.0
+
+auto eth1
+iface eth1 inet static
+         address 10.7.4.1
+         netmask 255.255.252.0
+```
+
+**Frieren**
+```bash
+# Static config for eth0
+auto eth0
+iface eth0 inet static
+         address 10.7.0.18
+         netmask 255.255.255.252
+         gateway 10.7.0.17
+	 up echo nameserver 192.168.122.1 > /etc/resolv.conf
+
+auto eth1
+iface eth1 inet static
+         address 10.7.0.13
+         netmask 255.255.255.252
+
+auto eth2
+iface eth2 inet static
+         address 10.7.0.9
+         netmask 255.255.255.252
+```
+
+**Himmel**
+```bash
+# Static config for eth0
+auto eth0
+iface eth0 inet static
+         address 10.7.0.10
+         netmask 255.255.255.252
+         gateway 10.7.0.9
+	 up echo nameserver 192.168.122.1 > /etc/resolv.conf
+
+auto eth1
+iface eth1 inet static
+         address 10.7.0.129
+         netmask 255.255.255.128
+
+auto eth2
+iface eth2 inet static
+         address 10.7.2.1
+         netmask 255.255.255.0
+```
+
+**Fern**
+```bash
+# Static config for eth0
+auto eth0
+iface eth0 inet static
+	address 10.7.0.130
+	netmask 255.255.255.128
+	gateway 10.7.0.129
+	up echo nameserver 192.168.122.1 > /etc/resolv.conf
+
+
+# Static config for eth1
+auto eth1
+iface eth1 inet static
+	address 10.7.0.5
+	netmask 255.255.255.252
+
+
+# Static config for eth2
+auto eth2
+iface eth2 inet static
+	address 10.7.0.1
+	netmask 255.255.255.252
+```
