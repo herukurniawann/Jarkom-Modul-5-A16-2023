@@ -42,3 +42,25 @@ Tugas berikutnya adalah memberikan ip pada subnet SchwerMountain, LaubHills, Tur
 <img width="4875" alt="Frame 10" src="https://github.com/herukurniawann/Jarkom-Modul-4-A16-2023/assets/93961310/60f6ef61-4454-4cf0-80d4-e1ea4b86fee5">
 
 
+## Konfigurasi Setiap Node
+
+**Aura**
+```bash
+auto eth0
+iface eth0 inet static
+    address 192.168.122.2
+    netmask 255.255.255.0
+    gateway 192.168.122.1
+
+auto eth1 
+iface eth1 inet static
+      address 10.7.0.21
+      netmask 255.255.255.252
+
+auto eth2
+iface eth2 inet static
+       address 10.7.0.17
+       netmask 255.255.255.252
+```
+ 
+
