@@ -31,7 +31,14 @@ Tugas berikutnya adalah memberikan ip pada subnet SchwerMountain, LaubHills, Tur
 
 <img width="2004" alt="Frame 9" src="https://github.com/herukurniawann/Jarkom-Modul-4-A16-2023/assets/93961310/f65f8a62-45f7-4cb0-8882-fc2484eeaabf">
 
-## Perhitungan VLSM
+## Penentuan Rute dan Pembagian IP VLSM
 
 ![image](https://github.com/herukurniawann/Jarkom-Modul-4-A16-2023/assets/93961310/655f8ec9-9487-49dc-ae03-5a56eb5a3a7e)
+
+![image](https://github.com/herukurniawann/Jarkom-Modul-4-A16-2023/assets/93961310/229ebd89-3df1-48f6-82e8-cee91655cf55)
+
+
+## Tree 
+<img width="4875" alt="Frame 10" src="https://github.com/herukurniawann/Jarkom-Modul-4-A16-2023/assets/93961310/60f6ef61-4454-4cf0-80d4-e1ea4b86fee5">
+
 
