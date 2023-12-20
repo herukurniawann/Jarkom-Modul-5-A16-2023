@@ -266,6 +266,7 @@ Untuk langkahnya mengonfigurasikan `Aura` menggunakan iptables dan tanpa menggun
 ![image](https://github.com/herukurniawann/Jarkom-Modul-5-A16-2023/assets/93961310/1ab89ec0-c5f0-4e5a-98ab-e0825ae94517)
 
 Hasil
+
 ![image](https://github.com/herukurniawann/Jarkom-Modul-5-A16-2023/assets/93961310/30647b13-7561-40a5-9b26-ac00d4d87e84)
 
 
