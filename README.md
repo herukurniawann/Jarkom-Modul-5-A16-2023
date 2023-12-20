@@ -317,7 +317,32 @@ Hasil Pengujian Pada Port 8000
 
 ## 3. Kepala Suku North Area meminta kalian untuk membatasi DHCP dan DNS Server hanya dapat dilakukan ping oleh maksimal 3 device secara bersamaan, selebihnya akan di drop.
 
+Langkah untuk membatasi DHCP dan DNS Server hanya dapat dilakukan ping oleh maksimal 3 device secara bersamaan dan selebihnya akan di drop, menggunakan command berikut ini :
 
+![image](https://github.com/herukurniawann/Jarkom-Modul-5-A16-2023/assets/93961310/ce50dad9-1075-4159-b683-d2b6acafe958)
+
+
+**Pengujian :**
+
+Melakukan ping Richter pada 4 Device secara bersamaan :
+
+1. Pertama Melakukan Ping pada SchewerMountain
+   
+![image](https://github.com/herukurniawann/Jarkom-Modul-5-A16-2023/assets/93961310/d0354701-397e-47ba-bf73-acfc14e6bd2e)
+
+
+2. Kedua Melakukan Ping pada GrobeForest
+
+![image](https://github.com/herukurniawann/Jarkom-Modul-5-A16-2023/assets/93961310/5195432b-6f23-42a7-9a1f-c4dddf371c4a)
+
+3. Ketiga Melakukan Ping pada TurkRegion
+
+![image](https://github.com/herukurniawann/Jarkom-Modul-5-A16-2023/assets/93961310/a220aff6-5604-4c51-bcb7-f85363598669)
+
+
+4. Keempat Melakukan Ping pada LaubHills
+
+![image](https://github.com/herukurniawann/Jarkom-Modul-5-A16-2023/assets/93961310/7af9074c-44bd-4bad-a1e2-ebbe73bcf45e)
 
 
 
