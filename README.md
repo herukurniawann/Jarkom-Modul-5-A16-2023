@@ -350,7 +350,28 @@ Pada saat melakukan Ping LaubHills Gagal, karena maksimal ping hanya 3 device se
 
 ## 4. Lakukan pembatasan sehingga koneksi SSH pada Web Server hanya dapat dilakukan oleh masyarakat yang berada pada GrobeForest.
 
-Untuk melakukan pembatasan sehingga koneksi SSH pada Web Server hanya dapat dilakukan oleh masyarakat yang berada pada GrobeForest.
+Lakukan pembatasan sehingga koneksi SSH pada Web Server hanya dapat dilakukan oleh masyarakat yang berada pada GrobeForest.
+
+```bash
+# Soal No 4
+iptables -A INPUT -p tcp --dport 22 -s 10.15.4.0/22 -j ACCEPT
+iptables -A INPUT -p tcp --dport 22 -j DROP
+```
+![image](https://github.com/herukurniawann/Jarkom-Modul-5-A16-2023/assets/93961310/a4895883-fcc2-4b8c-a0b3-9b9b4561ab8e)
+
+**Hasil**
+Untuk melakukan testing tersebut kita akan menggunakan netcat pada node Sein dan TurkRegion dengan perintah
+
+`nmap 10.15.4.2 -p 22`
+
+**Sein**
+
+![image](https://github.com/herukurniawann/Jarkom-Modul-5-A16-2023/assets/93961310/cbd61a9f-a5d6-4099-ad55-fbdd5c231799)
+
+**TurkRegion**
+
+![image](https://github.com/herukurniawann/Jarkom-Modul-5-A16-2023/assets/93961310/4db165b3-6ca3-46e2-bc31-7e5aaa38e7d8)
+
 
 
 
