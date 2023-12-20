@@ -256,6 +256,7 @@ route add -net 10.7.2.0 netmask 255.255.255.0 gw 10.7.0.10
 route add -net 10.7.0.0 netmask 255.255.255.252 gw 10.7.0.130
 route add -net 10.7.0.4 netmask 255.255.255.252 gw 10.7.0.130
 ```
+
 ## Soal:
 
 ## 1. Agar topologi yang kalian buat dapat mengakses keluar, kalian diminta untuk mengkonfigurasi Aura menggunakan iptables, tetapi tidak ingin menggunakan MASQUERADE.**
