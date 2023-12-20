@@ -257,7 +257,8 @@ route add -net 10.7.0.0 netmask 255.255.255.252 gw 10.7.0.130
 route add -net 10.7.0.4 netmask 255.255.255.252 gw 10.7.0.130
 ```
 ## Soal:
-**1. Agar topologi yang kalian buat dapat mengakses keluar, kalian diminta untuk mengkonfigurasi Aura menggunakan iptables, tetapi tidak ingin menggunakan MASQUERADE.**
+
+## 1. Agar topologi yang kalian buat dapat mengakses keluar, kalian diminta untuk mengkonfigurasi Aura menggunakan iptables, tetapi tidak ingin menggunakan MASQUERADE.**
 
 Untuk langkahnya mengonfigurasikan `Aura` menggunakan iptables dan tanpa menggunakan MASQUERADE memakai peritah berikut :
 
@@ -270,7 +271,7 @@ Hasil
 ![image](https://github.com/herukurniawann/Jarkom-Modul-5-A16-2023/assets/93961310/30647b13-7561-40a5-9b26-ac00d4d87e84)
 
 
-**2. Kalian diminta untuk melakukan drop semua TCP dan UDP kecuali port 8080 pada TCP.**
+## 2. Kalian diminta untuk melakukan drop semua TCP dan UDP kecuali port 8080 pada TCP.
 
 Langkah untuk melakukan drop semua TCP dan UDP kecuali port 8080 pada TCP, menggunakan command berikut ini :
 
@@ -289,6 +290,7 @@ iptables -A INPUT -p tcp -j DROP
 iptables -A INPUT -p udp -j DROP
 ```
 **Pengujian**
+
 Pengujian Pada Port 8080
 
 ![image](https://github.com/herukurniawann/Jarkom-Modul-5-A16-2023/assets/93961310/b7059b9b-7a1b-4060-b97e-7841d9d8aeab)
@@ -303,6 +305,7 @@ Pengujian Pada Port 8000
 
 
 **Hasil**
+
 Hasil Pengujian Pada Port 8080
 
 ![image](https://github.com/herukurniawann/Jarkom-Modul-5-A16-2023/assets/93961310/1b0730fe-276b-4df1-9b83-a68b55f8797e)
@@ -311,6 +314,9 @@ Hasil Pengujian Pada Port 8080
 Hasil Pengujian Pada Port 8000
 
 ![image](https://github.com/herukurniawann/Jarkom-Modul-5-A16-2023/assets/93961310/e28cf731-da7f-4e61-81e7-46cf278729d6)
+
+## 3. Kepala Suku North Area meminta kalian untuk membatasi DHCP dan DNS Server hanya dapat dilakukan ping oleh maksimal 3 device secara bersamaan, selebihnya akan di drop.
+
 
 
 
