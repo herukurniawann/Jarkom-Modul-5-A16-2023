@@ -256,3 +256,21 @@ route add -net 10.7.2.0 netmask 255.255.255.0 gw 10.7.0.10
 route add -net 10.7.0.0 netmask 255.255.255.252 gw 10.7.0.130
 route add -net 10.7.0.4 netmask 255.255.255.252 gw 10.7.0.130
 ```
+## Soal:
+**1. Agar topologi yang kalian buat dapat mengakses keluar, kalian diminta untuk mengkonfigurasi Aura menggunakan iptables, tetapi tidak ingin menggunakan MASQUERADE.**
+
+Untuk langkahnya mengonfigurasikan `Aura` menggunakan iptables dan tanpa menggunakan MASQUERADE memakai peritah berikut :
+
+`iptables -t nat -A POSTROUTING -s 10.7.0.0/20 -o eth0 -j SNAT --to-source 192.1$`
+
+![image](https://github.com/herukurniawann/Jarkom-Modul-5-A16-2023/assets/93961310/1ab89ec0-c5f0-4e5a-98ab-e0825ae94517)
+
+Hasil
+![image](https://github.com/herukurniawann/Jarkom-Modul-5-A16-2023/assets/93961310/30647b13-7561-40a5-9b26-ac00d4d87e84)
+
+
+**2. Kalian diminta untuk melakukan drop semua TCP dan UDP kecuali port 8080 pada TCP.**
+
+
+
+
