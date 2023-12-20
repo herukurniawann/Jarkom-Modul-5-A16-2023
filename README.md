@@ -258,6 +258,26 @@ route add -net 10.7.0.4 netmask 255.255.255.252 gw 10.7.0.130
 ```
 
 ## DHCP 
+**DHCP Server**
+
+DHCP Server, kita akan menginstall isc-dhcp-server dengan perintah
+```bash
+apt-get update
+wait
+apt-get install isc-dhcp-server -y
+wait
+
+echo '
+INTERFACESv4="eth0"
+INTERFACESv6=""
+' > /etc/default/isc-dhcp-server
+
+cp ~/dhcpd.conf /etc/dhcp/dhcpd.conf
+
+service isc-dhcp-server restart
+```
+Selanjutnya di file `dhcpd.conf`, kita akan mengkonfigurasi seperti berikut
+
 ```bash
 option domain-name "example.org";
 option domain-name-servers ns1.example.org, ns2.example.org;
@@ -302,6 +322,27 @@ subnet 10.7.4.0 netmask 255.255.252.0 {
     default-lease-time 180;
     max-lease-time 5760;
 }
+```
+
+Install isc-dhcp-relay pada route Himmel,Heiter dengan perintah
+
+**DHCP Relay**
+
+```bash
+apt-get update
+wait
+apt-get install isc-dhcp-relay -y
+wait
+
+echo '
+SERVERS="10.7.0.2"
+INTERFACES="eth0 eth1 eth2"
+OPTIONS="-m replace"
+' >  /etc/default/isc-dhcp-relay
+
+echo '
+net.ipv4.ip_forward=1
+' >  /etc/sysctl.conf
 ```
 
 ## Soal:
