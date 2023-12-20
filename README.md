@@ -344,6 +344,8 @@ Melakukan ping Richter pada 4 Device secara bersamaan :
 
 ![image](https://github.com/herukurniawann/Jarkom-Modul-5-A16-2023/assets/93961310/7af9074c-44bd-4bad-a1e2-ebbe73bcf45e)
 
+Pada saat melakukan Ping LaubHills Gagal, karena maksimal ping hanya 3 device secara bersamaan.
+
 
 
 
