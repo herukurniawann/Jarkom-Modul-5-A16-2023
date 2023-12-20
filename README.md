@@ -404,6 +404,8 @@ Hasil Pengujian Pada Port 8000
 
 ![image](https://github.com/herukurniawann/Jarkom-Modul-5-A16-2023/assets/93961310/e28cf731-da7f-4e61-81e7-46cf278729d6)
 
+**Tidak Berhasil**
+
 ## 3. Kepala Suku North Area meminta kalian untuk membatasi DHCP dan DNS Server hanya dapat dilakukan ping oleh maksimal 3 device secara bersamaan, selebihnya akan di drop.
 
 Langkah untuk membatasi DHCP dan DNS Server hanya dapat dilakukan ping oleh maksimal 3 device secara bersamaan dan selebihnya akan di drop, menggunakan command berikut ini :
