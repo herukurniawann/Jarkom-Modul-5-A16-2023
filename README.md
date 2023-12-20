@@ -288,14 +288,28 @@ iptables -A INPUT -p tcp --dport 8080 -j ACCEPT
 iptables -A INPUT -p tcp -j DROP
 iptables -A INPUT -p udp -j DROP
 ```
+**Pengujian**
+Pengujian Pada Port 8080
 
 ![image](https://github.com/herukurniawann/Jarkom-Modul-5-A16-2023/assets/93961310/b7059b9b-7a1b-4060-b97e-7841d9d8aeab)
 
 ![image](https://github.com/herukurniawann/Jarkom-Modul-5-A16-2023/assets/93961310/c1aa48af-42ac-49b6-858c-ceb5df24af38)
 
+Pengujian Pada Port 8000
+
+![image](https://github.com/herukurniawann/Jarkom-Modul-5-A16-2023/assets/93961310/560aea29-1c1e-4776-a802-64a7f2e98773)
+
+![image](https://github.com/herukurniawann/Jarkom-Modul-5-A16-2023/assets/93961310/ada21f37-4150-41c2-861e-a9f91b66f38c)
+
+
 **Hasil**
+Hasil Pengujian Pada Port 8080
 
 ![image](https://github.com/herukurniawann/Jarkom-Modul-5-A16-2023/assets/93961310/1b0730fe-276b-4df1-9b83-a68b55f8797e)
+
+
+Hasil Pengujian Pada Port 8000
+![image](https://github.com/herukurniawann/Jarkom-Modul-5-A16-2023/assets/93961310/e28cf731-da7f-4e61-81e7-46cf278729d6)
 
 
 
