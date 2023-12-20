@@ -362,7 +362,7 @@ iptables -A INPUT -p tcp --dport 22 -j DROP
 **Hasil**
 Untuk melakukan testing tersebut kita akan menggunakan netcat pada node Sein dan TurkRegion dengan perintah
 
-`nmap 10.15.4.2 -p 22`
+`nmap 10.7.4.2 -p 22`
 
 **Sein**
 
