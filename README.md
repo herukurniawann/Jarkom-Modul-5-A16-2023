@@ -442,7 +442,7 @@ Lakukan pembatasan sehingga koneksi SSH pada Web Server hanya dapat dilakukan ol
 
 ```bash
 # Soal No 4
-iptables -A INPUT -p tcp --dport 22 -s 10.15.4.0/22 -j ACCEPT
+iptables -A INPUT -p tcp --dport 22 -s 10.7.4.0/22 -j ACCEPT
 iptables -A INPUT -p tcp --dport 22 -j DROP
 ```
 ![image](https://github.com/herukurniawann/Jarkom-Modul-5-A16-2023/assets/93961310/a4895883-fcc2-4b8c-a0b3-9b9b4561ab8e)
