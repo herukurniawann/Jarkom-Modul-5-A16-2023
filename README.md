@@ -294,6 +294,7 @@ iptables -A INPUT -p udp -j DROP
 ![image](https://github.com/herukurniawann/Jarkom-Modul-5-A16-2023/assets/93961310/c1aa48af-42ac-49b6-858c-ceb5df24af38)
 
 **Hasil**
+
 ![image](https://github.com/herukurniawann/Jarkom-Modul-5-A16-2023/assets/93961310/1b0730fe-276b-4df1-9b83-a68b55f8797e)
 
 
