@@ -277,6 +277,23 @@ subnet 10.7.0.128 netmask 255.255.255.128 {
     option domain-name-servers 10.7.0.6;
     default-lease-time 180;
     max-lease-time 5760;
+}
+subnet 10.7.2.0 netmask 255.255.255.0 {
+    range 10.7.2.2 10.7.2.254;
+    option routers 10.7.2.1;
+    option broadcast-address 10.7.2.255;
+    option domain-name-servers 10.7.0.6;
+    default-lease-time 180;
+    max-lease-time 5760;
+}
+subnet 10.7.4.0 netmask 255.255.252.0 {
+    range 10.7.4.3 10.7.7.254;
+    option routers 10.7.4.1;
+    option broadcast-address 10.7.7.255;
+    option domain-name-servers 10.7.0.6;
+    default-lease-time 180;
+    max-lease-time 5760;
+}
 ```
 
 ## Soal:
