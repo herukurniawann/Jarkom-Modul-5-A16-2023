@@ -257,6 +257,28 @@ route add -net 10.7.0.0 netmask 255.255.255.252 gw 10.7.0.130
 route add -net 10.7.0.4 netmask 255.255.255.252 gw 10.7.0.130
 ```
 
+## DHCP 
+```bash
+option domain-name "example.org";
+option domain-name-servers ns1.example.org, ns2.example.org;
+
+default-lease-time 600;
+max-lease-time 7200;
+
+ddns-update-style none;
+
+subnet 10.7.0.0 netmask 255.255.255.252 {
+}
+
+subnet 10.7.0.128 netmask 255.255.255.128 {
+    range 10.7.0.131 10.7.0.254;
+    option routers 10.7.0.129;
+    option broadcast-address 10.7.0.255;
+    option domain-name-servers 10.7.0.6;
+    default-lease-time 180;
+    max-lease-time 5760;
+```
+
 ## Soal:
 
 ## 1. Agar topologi yang kalian buat dapat mengakses keluar, kalian diminta untuk mengkonfigurasi Aura menggunakan iptables, tetapi tidak ingin menggunakan MASQUERADE.**
