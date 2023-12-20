@@ -272,6 +272,32 @@ Hasil
 
 **2. Kalian diminta untuk melakukan drop semua TCP dan UDP kecuali port 8080 pada TCP.**
 
+Langkah untuk melakukan drop semua TCP dan UDP kecuali port 8080 pada TCP, menggunakan command berikut ini :
+
+![image](https://github.com/herukurniawann/Jarkom-Modul-5-A16-2023/assets/93961310/43f1d0ed-901a-48a8-a5b4-ab222e19ab41)
+
+```bash
+# soal nomor 2
+iptables -F
+
+# Izinkan koneksi pada port 8080 TCP
+iptables -A INPUT -p icmp -j ACCEPT
+iptables -A INPUT -p tcp --dport 8080 -j ACCEPT
+
+# Drop semua koneksi TCP & UDP
+iptables -A INPUT -p tcp -j DROP
+iptables -A INPUT -p udp -j DROP
+```
+
+![image](https://github.com/herukurniawann/Jarkom-Modul-5-A16-2023/assets/93961310/b7059b9b-7a1b-4060-b97e-7841d9d8aeab)
+
+![image](https://github.com/herukurniawann/Jarkom-Modul-5-A16-2023/assets/93961310/c1aa48af-42ac-49b6-858c-ceb5df24af38)
+
+**Hasil**
+![image](https://github.com/herukurniawann/Jarkom-Modul-5-A16-2023/assets/93961310/1b0730fe-276b-4df1-9b83-a68b55f8797e)
+
+
+
 
 
 
