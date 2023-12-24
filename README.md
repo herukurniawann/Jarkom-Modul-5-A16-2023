@@ -467,6 +467,26 @@ Untuk melakukan testing tersebut kita akan menggunakan netcat pada node Sein dan
 
 ## 5.Selain itu, akses menuju WebServer hanya diperbolehkan saat jam kerja yaitu Senin-Jumat pada pukul 08.00-16.00.
 
+Langkah pertama untuk melakukan pembatasan akses menuju WebServer hanya diperbolehkan saat jam kerja yaitu Senin-Jumat pada pukul 08.00-16.00, kita akan mengkonfigurasi iptables pada node Sein dan Stark dengan perintah
+
+```bash
+Izinkan akses ke Web Server pada Senin-Jumat pukul 08.00-16.00
+iptables -A INPUT -p tcp --dport 80 -m time --timestart 08:00 --timestop 16:00 --weekdays Mon,Tue,Wed,Thu,Fri -j ACCEPT
+
+# Menolak akses selain dari aturan yang telah ditentukan
+iptables -A INPUT -p tcp --dport 80 -j DROP
+```
+
+Untuk melakukan Testing menggunakan netcat pada node Sein dan Stark dengan perintah
+
+`nc -l -p 80`
+
+dan melakukan akses pada node Aura dengan perintah
+
+`curl 10.15.4.2 -v`
+
+
+
 ## 6. Lalu, karena ternyata terdapat beberapa waktu di mana network administrator dari WebServer tidak bisa stand by, sehingga perlu ditambahkan rule bahwa akses pada hari Senin - Kamis pada jam 12.00 - 13.00 dilarang (istirahat maksi cuy) dan akses di hari Jumat pada jam 11.00 - 13.00 juga dilarang (maklum, Jumatan rek).
 
 ## 7. Karena terdapat 2 WebServer, kalian diminta agar setiap client yang mengakses Sein dengan Port 80 akan didistribusikan secara bergantian pada Sein dan Stark secara berurutan dan request dari client yang mengakses Stark dengan port 443 akan didistribusikan secara bergantian pada Sein dan Stark secara berurutan.
