@@ -518,6 +518,8 @@ dan melakukan akses pada node Aura dengan perintah
 
 Dengan ini, kita dapat memastikan bahwa aturan-aturan yang telah ditentukan berfungsi sesuai yang diharapkan.
 
+**Hasil Output No 5 & 6**
+
 ![WhatsApp Image 2023-12-24 at 10 02 40_9d6fe6ad](https://github.com/herukurniawann/Jarkom-Modul-5-A16-2023/assets/93961310/63f580b5-e272-44c4-9359-9811e10c8a13)
 
 ![WhatsApp Image 2023-12-24 at 10 03 09_fc771373](https://github.com/herukurniawann/Jarkom-Modul-5-A16-2023/assets/93961310/e92bbfe0-5b5a-44f5-b62a-e687b4ec1716)
