@@ -359,6 +359,9 @@ Hasil
 
 ![image](https://github.com/herukurniawann/Jarkom-Modul-5-A16-2023/assets/93961310/30647b13-7561-40a5-9b26-ac00d4d87e84)
 
+Ping google di turkregion (node selain aura):
+![image](https://github.com/herukurniawann/Jarkom-Modul-5-A16-2023/assets/121850356/72d90951-b2a9-4d04-9c1e-009d8a629423)
+
 
 ## 2. Kalian diminta untuk melakukan drop semua TCP dan UDP kecuali port 8080 pada TCP.
 
@@ -392,7 +395,6 @@ Pengujian Pada Port 8000
 
 ![image](https://github.com/herukurniawann/Jarkom-Modul-5-A16-2023/assets/93961310/ada21f37-4150-41c2-861e-a9f91b66f38c)
 
-
 **Hasil**
 
 Hasil Pengujian Pada Port 8080
@@ -405,6 +407,20 @@ Hasil Pengujian Pada Port 8000
 ![image](https://github.com/herukurniawann/Jarkom-Modul-5-A16-2023/assets/93961310/e28cf731-da7f-4e61-81e7-46cf278729d6)
 
 **Tidak Berhasil**
+
+di laubhills dan revolte
+![image](https://github.com/herukurniawann/Jarkom-Modul-5-A16-2023/assets/121850356/67d79015-f762-4f66-b0ff-0f8b9a1d7a7e)
+![image](https://github.com/herukurniawann/Jarkom-Modul-5-A16-2023/assets/121850356/89401c4b-12ac-4680-90cc-335edca2e63f)
+
+tes udp:
+![image](https://github.com/herukurniawann/Jarkom-Modul-5-A16-2023/assets/121850356/63394bbe-e565-44d0-8c5e-c6276ff4f58f)
+![image](https://github.com/herukurniawann/Jarkom-Modul-5-A16-2023/assets/121850356/8621d2c4-1fb9-4b95-bcc6-a60f6ad4a0d2)
+
+port selain 8080
+
+![image](https://github.com/herukurniawann/Jarkom-Modul-5-A16-2023/assets/121850356/69104919-c5db-4518-b6a5-6f1fd3939b1d)
+![image](https://github.com/herukurniawann/Jarkom-Modul-5-A16-2023/assets/121850356/04405c94-9c69-449a-8767-bc7b0644503b)
+
 
 ## 3. Kepala Suku North Area meminta kalian untuk membatasi DHCP dan DNS Server hanya dapat dilakukan ping oleh maksimal 3 device secara bersamaan, selebihnya akan di drop.
 
@@ -484,6 +500,13 @@ Kemudian, lakukan akses pada node Aura menggunakan perintah berikut:
 `curl 10.7.4.2 -v`
 
 Dengan demikian, akses ke Web Server hanya akan diizinkan pada hari Senin hingga Jumat pada jam 08.00-16.00, dan permintaan akses di luar waktu tersebut akan ditolak. Pastikan konfigurasi iptables berjalan dengan benar untuk mengimplementasikan pembatasan akses ini.
+
+Hasil pengujian:
+Dites berdasarkan sample HAri Senin, Jumat dan Sabtu pada jam yang berbeda
+![image](https://github.com/herukurniawann/Jarkom-Modul-5-A16-2023/assets/121850356/bc255ef4-d84e-4fe2-95c4-35b00ab9afaf)
+
+![image](https://github.com/herukurniawann/Jarkom-Modul-5-A16-2023/assets/121850356/25bd41d4-7a36-4cb4-988d-48f894a44739)
+
 
 ## 6. Lalu, karena ternyata terdapat beberapa waktu di mana network administrator dari WebServer tidak bisa stand by, sehingga perlu ditambahkan rule bahwa akses pada hari Senin - Kamis pada jam 12.00 - 13.00 dilarang (istirahat maksi cuy) dan akses di hari Jumat pada jam 11.00 - 13.00 juga dilarang (maklum, Jumatan rek).
 
