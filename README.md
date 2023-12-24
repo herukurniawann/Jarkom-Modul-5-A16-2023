@@ -488,18 +488,27 @@ Dengan demikian, akses ke Web Server hanya akan diizinkan pada hari Senin hingga
 
 ## 6. Lalu, karena ternyata terdapat beberapa waktu di mana network administrator dari WebServer tidak bisa stand by, sehingga perlu ditambahkan rule bahwa akses pada hari Senin - Kamis pada jam 12.00 - 13.00 dilarang (istirahat maksi cuy) dan akses di hari Jumat pada jam 11.00 - 13.00 juga dilarang (maklum, Jumatan rek).
 
-Langkah untuk melakukan pembatasan akses pada hari Senin - Kamis pada jam 12.00 - 13.00 dilarang dan akses di hari Jumat pada jam 11.00 - 13.00 juga dilarang, kita akan mengkonfigurasi iptables pada node Sein dan Stark dengan perintah.
+Pada langkah ini, kita akan menambahkan pembatasan akses ke server web pada waktu-waktu tertentu agar dapat memberikan kesempatan bagi administrator jaringan untuk beristirahat dan juga mengakomodasi waktu Jumat saat umat Islam pergi ke masjid untuk salat Jumat.
+
+Langkah-langkahnya adalah sebagai berikut:
+Larangan Akses pada Hari Senin - Kamis pada Jam 12.00 - 13.00: Pada langkah pertama, kita akan menerapkan larangan akses pada hari Senin hingga Kamis pada jam 12.00 - 13.00. Ini bertujuan untuk memberikan waktu istirahat maksimal bagi administrator jaringan. Untuk melakukannya, kita menggunakan perintah berikut:
 
 ```bash
 Larangan akses pada hari Senin-Kamis pada jam 12.00-13.00
 iptables -A INPUT -p tcp --dport 80 -m time --timestart 12:00 --timestop 13:00 --weekdays Mon,Tue,Wed,Thu -j DROP
 ```
+Dengan perintah ini, semua permintaan akses ke port 80 (web) akan ditolak selama waktu yang telah ditentukan pada hari Senin hingga Kamis.
+
+Larangan Akses pada Hari Jumat pada Jam 11.00 - 13.00: Pada langkah kedua, kita akan menerapkan larangan akses pada hari Jumat pada jam 11.00 - 13.00. Ini bertujuan untuk menghormati waktu salat Jumat, yang umumnya dilaksanakan pada jam tersebut. Untuk melakukannya, kita menggunakan perintah berikut:
 ```
 Larangan akses pada hari Jumat pada jam 11.00-13.00
 iptables -A INPUT -p tcp --dport 80 -m time --timestart 11:00 --timestop 13:00 --weekdays Fri -j DROPs
 ```
+Dengan perintah ini, semua permintaan akses ke port 80 akan ditolak selama waktu yang telah ditentukan pada hari Jumat.
 
 **Testing**
+Setelah mengkonfigurasi aturan-aturan di atas, kita dapat melakukan pengujian (testing) untuk memastikan bahwa pembatasan akses berjalan dengan benar. Pengujian ini mencakup mengaktifkan layanan netcat pada node Sein dan Stark untuk memantau permintaan akses serta menguji akses dari node Aura menggunakan perintah curl atau nmap, sesuai dengan instruksi dalam teks.
+
 Untuk melakukan testing tersebut kita akan menggunakan netcat pada node Sein dan Stark dengan perintah
 
 `nc -l -p 80`
@@ -507,6 +516,8 @@ Untuk melakukan testing tersebut kita akan menggunakan netcat pada node Sein dan
 dan melakukan akses pada node Aura dengan perintah
 
 `bash nmap 10.7.4.2 -p 80`
+
+Dengan ini, kita dapat memastikan bahwa aturan-aturan yang telah ditentukan berfungsi sesuai yang diharapkan.
 
 ![WhatsApp Image 2023-12-24 at 10 02 40_9d6fe6ad](https://github.com/herukurniawann/Jarkom-Modul-5-A16-2023/assets/93961310/63f580b5-e272-44c4-9359-9811e10c8a13)
 
