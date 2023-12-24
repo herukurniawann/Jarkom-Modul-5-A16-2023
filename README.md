@@ -541,11 +541,12 @@ dan melakukan akses pada node Aura dengan perintah
 
 Dengan ini, kita dapat memastikan bahwa aturan-aturan yang telah ditentukan berfungsi sesuai yang diharapkan.
 
-**Hasil Output No 5 & 6**
+**Hasil Output No 6**
+di revolte:
+![image](https://github.com/herukurniawann/Jarkom-Modul-5-A16-2023/assets/121850356/b8bb29dd-77ad-4566-aa18-a8beea8e1e49)
+![image](https://github.com/herukurniawann/Jarkom-Modul-5-A16-2023/assets/121850356/6657c7e7-b49b-4687-bcb2-f4e9edd49139)
 
-![WhatsApp Image 2023-12-24 at 10 02 40_9d6fe6ad](https://github.com/herukurniawann/Jarkom-Modul-5-A16-2023/assets/93961310/63f580b5-e272-44c4-9359-9811e10c8a13)
 
-![WhatsApp Image 2023-12-24 at 10 03 09_fc771373](https://github.com/herukurniawann/Jarkom-Modul-5-A16-2023/assets/93961310/e92bbfe0-5b5a-44f5-b62a-e687b4ec1716)
 
 ## 7. Karena terdapat 2 WebServer, kalian diminta agar setiap client yang mengakses Sein dengan Port 80 akan didistribusikan secara bergantian pada Sein dan Stark secara berurutan dan request dari client yang mengakses Stark dengan port 443 akan didistribusikan secara bergantian pada Sein dan Stark secara berurutan.
 
@@ -563,6 +564,7 @@ iptables -A PREROUTING -t nat -p tcp -d 10.7.0.14 --dport 443 -j DNAT --to-desti
 Kemudian Untuk mencoba soal no 7 langkah pertama melakukan pemangilan berulang kali dengan menggunakan curl pada node dengan ip 10.7.4.2
 
 Maka akan didapatkan hasil sebagai berikut :
+![image](https://github.com/herukurniawann/Jarkom-Modul-5-A16-2023/assets/121850356/f45b5066-a1f4-411f-a0b6-ece6f520d067)
 
 
 ## 8. Karena berbeda koalisi politik, maka subnet dengan masyarakat yang berada pada Revolte dilarang keras mengakses WebServer hingga masa pencoblosan pemilu kepala suku 2024 berakhir. Masa pemilu (hingga pemungutan dan penghitungan suara selesai) kepala suku bersamaan dengan masa pemilu Presiden dan Wakil Presiden Indonesia 2024.
@@ -581,9 +583,10 @@ Untuk melakukan testing tersebut kita akan menggunakan netcat pada node Sein dan
 
 **Hasil**
 
-![WhatsApp Image 2023-12-24 at 10 24 55_bfc65de3](https://github.com/herukurniawann/Jarkom-Modul-5-A16-2023/assets/93961310/b2c11526-0ecc-4955-8a46-421eb0a06f66)
+![image](https://github.com/herukurniawann/Jarkom-Modul-5-A16-2023/assets/121850356/b7ddd41f-91ca-46fc-85d6-638b38774047)
+![image](https://github.com/herukurniawann/Jarkom-Modul-5-A16-2023/assets/121850356/d2f204c4-c603-4638-827f-09c54f64ecde)
+![image](https://github.com/herukurniawann/Jarkom-Modul-5-A16-2023/assets/121850356/c1f132f0-3b24-4e24-b75b-e61b2e064851)
 
-![WhatsApp Image 2023-12-24 at 10 24 14_196c170e](https://github.com/herukurniawann/Jarkom-Modul-5-A16-2023/assets/93961310/bdb2a8b3-5a9e-41a2-a70b-6bdf9c3a820e)
 
 ## 9. Sadar akan adanya potensial saling serang antar kubu politik, maka WebServer harus dapat secara otomatis memblokir  alamat IP yang melakukan scanning port dalam jumlah banyak (maksimal 20 scan port) di dalam selang waktu 10 menit. (clue: test dengan nmap)
 
@@ -598,12 +601,9 @@ iptables -A INPUT -p tcp --tcp-flags SYN,ACK,FIN,RST RST -j PORTSCAN
 
 Untuk melakukan testing untuk menentukan apakah port tersebut terbuka atau tidak dengan menggunakan nmap pada node `SchewerMountain` dengan perintah
 ```bash
-nmap 10.7.0.14 -p 1-10 # Masi bisa ngescan
-nmap 10.7.0.14 -p 1-30 # Langsung di block
+nmap 10.7.4.2 -c 25
 ```
-![WhatsApp Image 2023-12-24 at 11 21 33_efdccf04](https://github.com/herukurniawann/Jarkom-Modul-5-A16-2023/assets/93961310/933a3869-672a-4012-86e8-655334690c94)
-
-![WhatsApp Image 2023-12-24 at 12 17 11_b9ec4471](https://github.com/herukurniawann/Jarkom-Modul-5-A16-2023/assets/93961310/da3fe1d0-2d01-47b2-9f83-ff60495b323c)
+![image](https://github.com/herukurniawann/Jarkom-Modul-5-A16-2023/assets/121850356/0ddf6575-0dae-4f7a-9cd3-669598b10732)
 
 
 
@@ -649,6 +649,9 @@ mail.*                          -/var/log/mail.log
 mail.err                        /var/log/mail.err
 ```
 jika sudah kita perlu melakukan menjalankan command touch `/var/log/iptables.log` dan menjalankan `/etc/init.d/rsyslog restart` untuk melakukan restart syslog supaya konfigurasi baru dapat diterapkan kedalam syslog dan hasil log bisa masuk kedalam `iptables.log`
+Hasil log:
+![image](https://github.com/herukurniawann/Jarkom-Modul-5-A16-2023/assets/121850356/0513304a-080e-46fa-ab61-f3d7bb313204)
+
 
 
 ## Kendala
