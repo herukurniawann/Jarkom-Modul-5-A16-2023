@@ -590,15 +590,19 @@ Langkah untuk melakukan logging paket yang di-drop, kita akan mengkonfigurasi `i
 
 Pada kali ini kita akan meneruskan Soal nomor 9 dan menambahakan script berikut ini :
 
-`iptables -A PORTSCAN -m recent --update --seconds 600 --hitcount 20 --name portscan -j LOG --log-prefix "Portscan Detected: " --log-level 4`
+```bash
+iptables -A PORTSCAN -m recent --update --seconds 600 --hitcount 20 --name portscan -j LOG --log-prefix "Portscan Detected: " --log-level 4`
+```
 
 `LOG --log-prefix "Portscan detected: " --log-level 4` untuk mengarahkan paket yang memenuhi aturan untuk dilakukan logging.
 
-`j LOG`` digunakan untuk melakukan logging.
-`--log-prefix "Portscan detected: ":` untuk menambahkan prefix kedalam log yaitu teks "Portscan detected: {isi log}".
-`--log-level 4:` menentukan tingakatan atau level log pada syslog, dalam hal ini level 4 berarti 'Warning'.
-Karena pada log sebelumnya kita menentukan level log 4 (warning), selanjutnya kita perlu melakukan konfigurasi pada `etc/rsyslog.d/50-default.conf` untuk menambahkan configurasi `kernel.warning -/var/log/iptables.log` sehingga seperti configurasi dibawah ini
+1. j LOG` digunakan untuk melakukan logging.
+2. --log-prefix "Portscan detected: ": digunakan untuk menambahkan prefix kedalam log yaitu teks "Portscan detected: {isi log}".
+3. --log-level 4: menentukan tingakatan atau level log pada syslog, dalam hal ini level 4 berarti 'Warning'.
+   
+Pada log sebelumnya menentukan level log 4 (warning), selanjutnya kita perlu melakukan konfigurasi pada `etc/rsyslog.d/50-default.conf` untuk menambahkan configurasi `kernel.warning -/var/log/iptables.log` sehingga seperti configurasi dibawah ini
 
+```bash
 #
 # First some standard log files.  Log by facility.
 #
@@ -611,6 +615,7 @@ kernel.warning                  -/var/log/iptables.log
 #lpr.*                          -/var/log/lpr.log
 mail.*                          -/var/log/mail.log
 #user.*                         -/var/log/user.log
+```
 
 ```bash
 # Logging for the mail system.  Split it up so that
