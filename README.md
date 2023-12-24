@@ -576,6 +576,11 @@ Untuk melakukan testing untuk menentukan apakah port tersebut terbuka atau tidak
 nmap 10.7.0.14 -p 1-10 # Masi bisa ngescan
 nmap 10.7.0.14 -p 1-30 # Langsung di block
 ```
+![WhatsApp Image 2023-12-24 at 11 21 33_efdccf04](https://github.com/herukurniawann/Jarkom-Modul-5-A16-2023/assets/93961310/933a3869-672a-4012-86e8-655334690c94)
+
+![WhatsApp Image 2023-12-24 at 12 17 11_b9ec4471](https://github.com/herukurniawann/Jarkom-Modul-5-A16-2023/assets/93961310/da3fe1d0-2d01-47b2-9f83-ff60495b323c)
+
+
 
 ## 10. Karena kepala suku ingin tau paket apa saja yang di-drop, maka di setiap node server dan router ditambahkan logging paket yang di-drop dengan standard syslog level. 
 
