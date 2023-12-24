@@ -555,6 +555,7 @@ Langkah pengerjaan nomor 8 diperlukan bantuan `--datestart` dan `--datestop` unt
 Untuk melakukan testing tersebut kita akan menggunakan netcat pada node Sein dan Stark dengan perintah `nc -l -p 80`
 
 **Hasil**
+
 ![WhatsApp Image 2023-12-24 at 10 24 55_bfc65de3](https://github.com/herukurniawann/Jarkom-Modul-5-A16-2023/assets/93961310/b2c11526-0ecc-4955-8a46-421eb0a06f66)
 
 ![WhatsApp Image 2023-12-24 at 10 24 14_196c170e](https://github.com/herukurniawann/Jarkom-Modul-5-A16-2023/assets/93961310/bdb2a8b3-5a9e-41a2-a70b-6bdf9c3a820e)
