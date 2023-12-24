@@ -484,8 +484,6 @@ Kemudian, lakukan akses pada node Aura menggunakan perintah berikut:
 
 `curl 10.7.4.2 -v`
 
-![WhatsApp Image 2023-12-24 at 09 51 15_843e8a2e](https://github.com/herukurniawann/Jarkom-Modul-5-A16-2023/assets/121850356/cfaa8bee-6e09-4e3d-a4ca-a66dc11bf896)
-
 Dengan demikian, akses ke Web Server hanya akan diizinkan pada hari Senin hingga Jumat pada jam 08.00-16.00, dan permintaan akses di luar waktu tersebut akan ditolak. Pastikan konfigurasi iptables berjalan dengan benar untuk mengimplementasikan pembatasan akses ini.
 
 ## 6. Lalu, karena ternyata terdapat beberapa waktu di mana network administrator dari WebServer tidak bisa stand by, sehingga perlu ditambahkan rule bahwa akses pada hari Senin - Kamis pada jam 12.00 - 13.00 dilarang (istirahat maksi cuy) dan akses di hari Jumat pada jam 11.00 - 13.00 juga dilarang (maklum, Jumatan rek).
@@ -509,6 +507,10 @@ Untuk melakukan testing tersebut kita akan menggunakan netcat pada node Sein dan
 dan melakukan akses pada node Aura dengan perintah
 
 `bash nmap 10.7.4.2 -p 80`
+
+![WhatsApp Image 2023-12-24 at 10 02 40_9d6fe6ad](https://github.com/herukurniawann/Jarkom-Modul-5-A16-2023/assets/93961310/63f580b5-e272-44c4-9359-9811e10c8a13)
+
+![WhatsApp Image 2023-12-24 at 10 03 09_fc771373](https://github.com/herukurniawann/Jarkom-Modul-5-A16-2023/assets/93961310/e92bbfe0-5b5a-44f5-b62a-e687b4ec1716)
 
 ## 7. Karena terdapat 2 WebServer, kalian diminta agar setiap client yang mengakses Sein dengan Port 80 akan didistribusikan secara bergantian pada Sein dan Stark secara berurutan dan request dari client yang mengakses Stark dengan port 443 akan didistribusikan secara bergantian pada Sein dan Stark secara berurutan.
 
