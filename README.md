@@ -1,4 +1,4 @@
-## Praktikum Modul 5 Jaringan Komputer
+![WhatsApp Image 2023-12-24 at 09 51 15_843e8a2e](https://github.com/herukurniawann/Jarkom-Modul-5-A16-2023/assets/121850356/62bcf35f-cda1-446b-be45-83995304a83d)## Praktikum Modul 5 Jaringan Komputer
 
 **Kelompok A16 :**
 
@@ -467,7 +467,7 @@ Untuk melakukan testing tersebut kita akan menggunakan netcat pada node Sein dan
 
 ## 5.Selain itu, akses menuju WebServer hanya diperbolehkan saat jam kerja yaitu Senin-Jumat pada pukul 08.00-16.00.
 
-Langkah pertama untuk melakukan pembatasan akses menuju WebServer hanya diperbolehkan saat jam kerja yaitu Senin-Jumat pada pukul 08.00-16.00, kita akan mengkonfigurasi iptables pada node Sein dan Stark dengan perintah
+Langkah pertama untuk melakukan pembatasan akses menuju WebServer hanya diperbolehkan saat jam kerja, yaitu Senin-Jumat pada pukul 08.00-16.00, adalah dengan mengkonfigurasi iptables pada node Sein dan Stark menggunakan perintah berikut:
 
 ```bash
 Izinkan akses ke Web Server pada Senin-Jumat pukul 08.00-16.00
@@ -477,13 +477,16 @@ iptables -A INPUT -p tcp --dport 80 -m time --timestart 08:00 --timestop 16:00 -
 iptables -A INPUT -p tcp --dport 80 -j DROP
 ```
 
-Untuk melakukan Testing menggunakan netcat pada node Sein dan Stark dengan perintah
-
+Untuk melakukan pengujian (testing), gunakan netcat pada node Sein dan Stark dengan perintah berikut:
 `nc -l -p 80`
 
-dan melakukan akses pada node Aura dengan perintah
+Kemudian, lakukan akses pada node Aura menggunakan perintah berikut:
 
 `curl 10.7.4.2 -v`
+
+![WhatsApp Image 2023-12-24 at 09 51 15_843e8a2e](https://github.com/herukurniawann/Jarkom-Modul-5-A16-2023/assets/121850356/cfaa8bee-6e09-4e3d-a4ca-a66dc11bf896)
+
+Dengan demikian, akses ke Web Server hanya akan diizinkan pada hari Senin hingga Jumat pada jam 08.00-16.00, dan permintaan akses di luar waktu tersebut akan ditolak. Pastikan konfigurasi iptables berjalan dengan benar untuk mengimplementasikan pembatasan akses ini.
 
 ## 6. Lalu, karena ternyata terdapat beberapa waktu di mana network administrator dari WebServer tidak bisa stand by, sehingga perlu ditambahkan rule bahwa akses pada hari Senin - Kamis pada jam 12.00 - 13.00 dilarang (istirahat maksi cuy) dan akses di hari Jumat pada jam 11.00 - 13.00 juga dilarang (maklum, Jumatan rek).
 
