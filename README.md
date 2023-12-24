@@ -1,4 +1,4 @@
-![WhatsApp Image 2023-12-24 at 09 51 15_843e8a2e](https://github.com/herukurniawann/Jarkom-Modul-5-A16-2023/assets/121850356/62bcf35f-cda1-446b-be45-83995304a83d)## Praktikum Modul 5 Jaringan Komputer
+## Praktikum Modul 5 Jaringan Komputer
 
 **Kelompok A16 :**
 
