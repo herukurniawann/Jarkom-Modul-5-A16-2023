@@ -595,3 +595,7 @@ mail.err                        /var/log/mail.err
 jika sudah kita perlu melakukan menjalankan command touch `/var/log/iptables.log` dan menjalankan `/etc/init.d/rsyslog restart` untuk melakukan restart syslog supaya konfigurasi baru dapat diterapkan kedalam syslog dan hasil log bisa masuk kedalam `iptables.log`
 
 
+## Kendala
+1. GNS Corrupt mendadak
+
+
